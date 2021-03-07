@@ -119,4 +119,151 @@
   keywords  = {application program interfaces;Big Data;collaborative filtering;Internet;recommender systems;scalable Web recommender system;smart Web;collaborative filtering;content-based filtering;real-time big data architecture;Apache Hadoop ecosystem;RESTful API;Recommender systems;Uniform resource locators;Collaboration;Computer architecture;Big data;Algorithm design and analysis;Real-time systems},
 }
 
+@InProceedings{Garcia2018,
+  author    = {Garc\'{\i}a, Iv\'{a}n and Bellog\'{\i}n, Alejandro},
+  booktitle = {Proceedings of the 12th ACM Conference on Recommender Systems},
+  title     = {Towards an Open, Collaborative REST API for Recommender Systems},
+  year      = {2018},
+  address   = {New York, NY, USA},
+  pages     = {504–505},
+  publisher = {Association for Computing Machinery},
+  series    = {RecSys '18},
+  abstract  = {Recommender Systems aim to suggest relevant items to users, however, for this they need to properly obtain/serve different types of data from/to the users of such systems. In this work, we propose and show an example implementation for a common REST API focused on Recommender Systems. This API meets the most typical requirements faced by Recommender Systems practitioners while, at the same time, is open and flexible to be extended, based on the feedback from the community. We also present a Web client that demonstrates the functionalities of the proposed API.},
+  doi       = {10.1145/3240323.3241615},
+  isbn      = {9781450359016},
+  location  = {Vancouver, British Columbia, Canada},
+  numpages  = {2},
+  url       = {https://doi.org/10.1145/3240323.3241615},
+}
+
+@InProceedings{BenShimon2014,
+  author    = {Ben-Shimon, David and Alexander Tsikinovsky, Alexander and Friedmann, Michael and H\"{o}rle, Johannes},
+  booktitle = {Proceedings of the 8th ACM Conference on Recommender Systems},
+  title     = {Configuring and Monitoring Recommender System as a Service},
+  year      = {2014},
+  address   = {New York, NY, USA},
+  pages     = {363–364},
+  publisher = {Association for Computing Machinery},
+  series    = {RecSys '14},
+  abstract  = {Many small and medium e-commerce retailers and publishers use recommender systems (RS) to personalize the website content. Many of them do not have an on premise solution for doing that, but rather contact a company that delivers the RS as a service to their website. The service is then responsible for collecting and storing the data, building recommendation models, and answering recommendation requests. Once the integration to such a service is done, the e-commerce retailer still wish to have some control on the service. Control that allows him to configure the recommendation models, turn off/on the service, apply filters on recommendations, define fallback models and more. In this demo we provide an overview of a real backend system which enables to a typical website owner exactly these capabilities. Capabilities for controlling the RS service in terms of configuration, management and monitoring.},
+  doi       = {10.1145/2645710.2645713},
+  isbn      = {9781450326681},
+  keywords  = {configuration, recommender system as a service, management, graphic user interface},
+  location  = {Foster City, Silicon Valley, California, USA},
+  numpages  = {2},
+  url       = {https://doi.org/10.1145/2645710.2645713},
+}
+
+@Misc{,
+  title    = {{HapiGER} a {Scalable} {Simple} {Recommendations} {Engine}},
+  abstract = {HapiGER a Scalable Simple Recommendations Engine},
+  journal  = {HapiGER},
+  url      = {http://www.hapiger.com},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Rcmmndr {\textbar} {Heroku} {Dev} {Center}},
+  abstract = {Addon Documentation},
+  language = {en},
+  url      = {https://devcenter.heroku.com/articles/rcmmndr},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Marko2018,
+  author   = {Marko, Andras Marcel},
+  month    = aug,
+  title    = {Recommendation as a {Service} — {The} {Rise} of {Recommendation} {Engines}},
+  year     = {2018},
+  abstract = {Although the diverse capabilities and strong benefits of recommendation solutions are already leveraged by several industries, their future…},
+  journal  = {Medium},
+  language = {en},
+  url      = {https://medium.com/yusp/recommendation-as-a-service-the-rise-of-recommendation-engines-294e8f7655f8},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Kea {Labs}},
+  abstract = {Recommendations, Email Personalization and Search for e-commerce},
+  journal  = {Kea Labs},
+  language = {en},
+  url      = {https://kealabs.com/recommendations-api},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Jenson2021,
+  author   = {Jenson, Graham},
+  month    = mar,
+  note     = {original-date: 2015-06-12T07:31:32Z},
+  title    = {grahamjenson/list\_of\_recommender\_systems},
+  year     = {2021},
+  abstract = {A List of Recommender Systems and Resources. Contribute to grahamjenson/list\_of\_recommender\_systems development by creating an account on GitHub.},
+  url      = {https://github.com/grahamjenson/list_of_recommender_systems},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Product {Recommendation} {Engine} {\textbar} {AI} {Powered} {Recommendation} as a {Service}},
+  abstract = {Create highly Personlized Product Recommendation Engine with Shopping experience of each Customer having AI Powered Recommendation as a Service for filtering more specific search results employing ML-driven recommender systems.},
+  url      = {https://www.z5.ai/ai-powered-recommendation-as-a-service},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Recommendations-{As}-a-{Service} ({RaaS}) – {RS}\_c},
+  language = {en-GB},
+  url      = {https://recommender-systems.com/resources/recommendations-as-a-service-raas/},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Outsource {Recommender} {System} {Development} {Services} - {FWS}},
+  abstract = {Flatworld Solutions' recommendation systems can boost online sales on your e-commerce site. Contact us for recommender system development.},
+  language = {en},
+  url      = {https://www.flatworldsolutions.com/data-science/recommender-system-development-services.php},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Content-based {Recommender} {Using} {Natural} {Language} {Processing} ({NLP})},
+  abstract = {A guide to build a content-based movie recommender model based on NLP.},
+  journal  = {KDnuggets},
+  language = {en-US},
+  url      = {https://www.kdnuggets.com/content-based-recommender-using-natural-language-processing-nlp.html/},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {shrinidhikr/{Content}-{Based}-{Recommender}-{System}},
+  abstract = {Content based Recommender System using NLP Tool - Rake - shrinidhikr/Content-Based-Recommender-System},
+  journal  = {GitHub},
+  language = {en},
+  url      = {https://github.com/shrinidhikr/Content-Based-Recommender-System},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Mavuduru2020,
+  author   = {Mavuduru, Amol},
+  month    = dec,
+  title    = {How you can build simple recommender systems with {Surprise}.},
+  year     = {2020},
+  abstract = {Using this Python library to build a book recommendation system.},
+  journal  = {Medium},
+  language = {en},
+  url      = {https://towardsdatascience.com/how-you-can-build-simple-recommender-systems-with-surprise-b0d32a8e4802},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Li2019,
+  author   = {Li, Susan},
+  month    = sep,
+  title    = {Building and {Testing} {Recommender} {Systems} {With} {Surprise}, {Step}-{By}-{Step}},
+  year     = {2019},
+  abstract = {Learn how to build your own recommendation engine with the help of Python and Surprise Library, Collaborative Filtering},
+  journal  = {Medium},
+  language = {en},
+  url      = {https://towardsdatascience.com/building-and-testing-recommender-systems-with-surprise-step-by-step-d4ba702ef80b},
+  urldate  = {2021-03-07},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

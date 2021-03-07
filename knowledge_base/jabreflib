@@ -154,4 +154,116 @@
   url       = {https://doi.org/10.1145/2645710.2645713},
 }
 
+@Misc{,
+  title    = {{HapiGER} a {Scalable} {Simple} {Recommendations} {Engine}},
+  abstract = {HapiGER a Scalable Simple Recommendations Engine},
+  journal  = {HapiGER},
+  url      = {http://www.hapiger.com},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Rcmmndr {\textbar} {Heroku} {Dev} {Center}},
+  abstract = {Addon Documentation},
+  language = {en},
+  url      = {https://devcenter.heroku.com/articles/rcmmndr},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Marko2018,
+  author   = {Marko, Andras Marcel},
+  month    = aug,
+  title    = {Recommendation as a {Service} — {The} {Rise} of {Recommendation} {Engines}},
+  year     = {2018},
+  abstract = {Although the diverse capabilities and strong benefits of recommendation solutions are already leveraged by several industries, their future…},
+  journal  = {Medium},
+  language = {en},
+  url      = {https://medium.com/yusp/recommendation-as-a-service-the-rise-of-recommendation-engines-294e8f7655f8},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Kea {Labs}},
+  abstract = {Recommendations, Email Personalization and Search for e-commerce},
+  journal  = {Kea Labs},
+  language = {en},
+  url      = {https://kealabs.com/recommendations-api},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Jenson2021,
+  author   = {Jenson, Graham},
+  month    = mar,
+  note     = {original-date: 2015-06-12T07:31:32Z},
+  title    = {grahamjenson/list\_of\_recommender\_systems},
+  year     = {2021},
+  abstract = {A List of Recommender Systems and Resources. Contribute to grahamjenson/list\_of\_recommender\_systems development by creating an account on GitHub.},
+  url      = {https://github.com/grahamjenson/list_of_recommender_systems},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Product {Recommendation} {Engine} {\textbar} {AI} {Powered} {Recommendation} as a {Service}},
+  abstract = {Create highly Personlized Product Recommendation Engine with Shopping experience of each Customer having AI Powered Recommendation as a Service for filtering more specific search results employing ML-driven recommender systems.},
+  url      = {https://www.z5.ai/ai-powered-recommendation-as-a-service},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Recommendations-{As}-a-{Service} ({RaaS}) – {RS}\_c},
+  language = {en-GB},
+  url      = {https://recommender-systems.com/resources/recommendations-as-a-service-raas/},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Outsource {Recommender} {System} {Development} {Services} - {FWS}},
+  abstract = {Flatworld Solutions' recommendation systems can boost online sales on your e-commerce site. Contact us for recommender system development.},
+  language = {en},
+  url      = {https://www.flatworldsolutions.com/data-science/recommender-system-development-services.php},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {Content-based {Recommender} {Using} {Natural} {Language} {Processing} ({NLP})},
+  abstract = {A guide to build a content-based movie recommender model based on NLP.},
+  journal  = {KDnuggets},
+  language = {en-US},
+  url      = {https://www.kdnuggets.com/content-based-recommender-using-natural-language-processing-nlp.html/},
+  urldate  = {2021-03-07},
+}
+
+@Misc{,
+  title    = {shrinidhikr/{Content}-{Based}-{Recommender}-{System}},
+  abstract = {Content based Recommender System using NLP Tool - Rake - shrinidhikr/Content-Based-Recommender-System},
+  journal  = {GitHub},
+  language = {en},
+  url      = {https://github.com/shrinidhikr/Content-Based-Recommender-System},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Mavuduru2020,
+  author   = {Mavuduru, Amol},
+  month    = dec,
+  title    = {How you can build simple recommender systems with {Surprise}.},
+  year     = {2020},
+  abstract = {Using this Python library to build a book recommendation system.},
+  journal  = {Medium},
+  language = {en},
+  url      = {https://towardsdatascience.com/how-you-can-build-simple-recommender-systems-with-surprise-b0d32a8e4802},
+  urldate  = {2021-03-07},
+}
+
+@Misc{Li2019,
+  author   = {Li, Susan},
+  month    = sep,
+  title    = {Building and {Testing} {Recommender} {Systems} {With} {Surprise}, {Step}-{By}-{Step}},
+  year     = {2019},
+  abstract = {Learn how to build your own recommendation engine with the help of Python and Surprise Library, Collaborative Filtering},
+  journal  = {Medium},
+  language = {en},
+  url      = {https://towardsdatascience.com/building-and-testing-recommender-systems-with-surprise-step-by-step-d4ba702ef80b},
+  urldate  = {2021-03-07},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
