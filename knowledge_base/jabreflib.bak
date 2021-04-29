@@ -266,4 +266,48 @@
   urldate  = {2021-03-07},
 }
 
+@Article{Burke2002,
+  author   = {Burke, Robin},
+  journal  = {User Modeling and User-Adapted Interaction},
+  title    = {Hybrid Recommender Systems: Survey and Experiments},
+  year     = {2002},
+  issn     = {1573-1391},
+  number   = {4},
+  pages    = {331--370},
+  volume   = {12},
+  abstract = {Recommender systems represent user preferences for the purpose of suggesting items to purchase or examine. They have become fundamental applications in electronic commerce and information access, providing suggestions that effectively prune large information spaces so that users are directed toward those items that best meet their needs and preferences. A variety of techniques have been proposed for performing recommendation, including content-based, collaborative, knowledge-based and other techniques. To improve performance, these methods have sometimes been combined in hybrid recommenders. This paper surveys the landscape of actual and possible hybrid recommenders, and introduces a novel hybrid, EntreeC, a system that combines knowledge-based recommendation and collaborative filtering to recommend restaurants. Further, we show that semantic ratings obtained from the knowledge-based part of the system enhance the effectiveness of collaborative filtering.},
+  doi      = {10.1023/A:1021240730564},
+  refid    = {Burke2002},
+  url      = {https://doi.org/10.1023/A:1021240730564},
+}
+
+@InProceedings{Kunaver2006,
+  author = {Kunaver, Matevž and Pozrl, Tomaz and Pogacnik, Matevz and Tasic, Jurij},
+  title  = {The evaluation of a hybrid recommender system for recommendation of movies},
+  year   = {2006},
+  month  = {08},
+}
+
+@Article{Cano2017,
+  author  = {Çano, Erion},
+  journal = {Intelligent Data Analysis},
+  title   = {Hybrid Recommender Systems: A Systematic Literature Review},
+  year    = {2017},
+  month   = {11},
+  pages   = {1487-1524},
+  volume  = {21},
+  doi     = {10.3233/IDA-163209},
+}
+
+@Misc{2018,
+  month    = may,
+  title    = {How to {Build} a {Hybrid} {Recommender} {System}},
+  year     = {2018},
+  abstract = {Amazon, Netflix, Google searches—chances are, you've encountered a recommender system. Read this blog to learn how to build one of your own!},
+  journal  = {AgileThought},
+  language = {en-US},
+  url      = {https://agilethought.com/blogs/how-to-build-hybrid-recommender-system/},
+  urldate  = {2021-03-16},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
