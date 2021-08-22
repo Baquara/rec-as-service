@@ -1,56 +1,81 @@
- 
-.input,
-.textarea {
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: inherit;
-  padding: 1px 6px;
-}
-
-.input-wrap {
-  position: relative;
-}
-.input-wrap .input {
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
-.width-machine {
-  /*   Sort of a magic number to add extra space for number spinner */
-  padding: 0 1rem;
-}
-
-.textarea {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  resize: both;
-  min-height: 40px;
-  line-height: 20px;
-}
-
-.textarea[contenteditable]:empty::before {
-  content: "Enter one search term per line";
-  color: gray;
-}
-
-/* Just for demo */
-* {
-  box-sizing: border-box;
-}
 body {
-  font-family: "Heebo", sans-serif;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 1rem;
+    font-family: Garamond;
 }
 
-p strong {
-  display: block;
-}
 h1 {
-  border-bottom: 5px solid #9ccc65;
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
 }
-h2 {
-  border-bottom: 2px solid #c5e1a5;
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+#chatbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#userInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#textInput {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+#buttonInput {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.botText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.botText span {
+    background-color: #EF5350;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
 }

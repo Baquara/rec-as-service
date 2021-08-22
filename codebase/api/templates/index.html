@@ -1,85 +1,59 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
+  <body>
+    <h1>Chatbot UFBA</h1>
+    <h3>Uma implementação web em Flask</h3>
+    <div>
+      <div id="chatbox">
+        <p class="botText"><span>Olá! Sou um chatbot.</span></p>
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Message">
+        <input id="buttonInput" type="submit" value="Send">
+      </div>
+      <script>
+        function getBotResponse() {
+            var rawText = $("#textInput").val();
+            var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            $("#chatbox").append(userHtml);
+            $("#textInput").val("");
+          var jso = JSON.stringify({
+            "entrada": rawText
+          });
+          console.log(jso);
+          let xhr = new XMLHttpRequest();
+          let url = "http://127.0.0.1:5000/entrada";
+          xhr.open("POST", url, true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.send(jso);
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              myObj = JSON.parse(this.responseText);
+            var botHtml = '<p class="botText"><span>' + myObj.resposta + '</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
 
+            }
+          };
 
-
-<h1>Embeddize list as Youtube videos</h1>
-
-
-<p><strong>Enter your list:</strong> <span id="textarea" name="textarea"  class="textarea" role="textbox" contenteditable></span></p>
-
-
-<button onclick="myfun()" style="margin-bottom:0px;">
-    Generate list
-</button>
-<button onclick="fclear()" style="margin-bottom:0px;">
-    Clear
-</button>
-
-
-
-<h1>Result</h1>
-
-<div id="wait" name="wait"></div>
- <div id="result" name="result"></div>
-
-
-
- 
-<script>
-
-
-    function myfun() {
-
-        var splitted = document.querySelector('#textarea').innerHTML.replace(/\r?\n/,"<br>").replace("<div>","<br>").split("<br>");
+        }
         
-
-        document.querySelector('#wait').innerHTML = "Please wait..."; 
-var i;
-        for (i = 0; i < splitted.length; i++) {
-
-  var jso = JSON.stringify({"textarea": splitted[i]});
-        console.log(jso);
-
-
-    
-let xhr = new XMLHttpRequest(); 
-let url = "http://127.0.0.1:5000/returnebd"; 
-xhr.open("POST", url, true); 
-xhr.setRequestHeader("Content-Type", "application/json");
-xhr.send(jso); 
-
-
-xhr.onreadystatechange = function () { 
-                if (xhr.readyState === 4 && xhr.status === 200) {
-  
-                    // Print received data from server 
-
-                    document.getElementById('result').insertAdjacentHTML('beforeend', this.responseText);
-                    document.querySelector('#wait').innerHTML = splitted.length-i + " left..."; 
-
-  
-                } 
-            }; 
-
-
-}
-
-    
-
-
-
-
-    }
-
-
-    function fclear(){
-
-document.querySelector('#result').innerHTML = "";
-
-
-}
-    
-       </script>
+        $("#textInput").keypress(function(e) {
+            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+            if (document.getElementById("textInput").value != "") {
+                getBotResponse();
+            }
+        })
+      </script>
+    </div>
+  </body>
+</html>
