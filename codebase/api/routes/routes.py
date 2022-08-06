@@ -1,6 +1,11 @@
 from app import app
 from flask import jsonify, render_template
-from ..views import users, helper, items, events, train
+from ..views import users, helper, items
+from ..apis import collaborative_filtering_rec
+from ..apis import content_based_rec
+import time
+
+
 
 #Insert a user
 @app.route('/user', methods=['POST'])
@@ -50,7 +55,19 @@ def get_item():
 #Returns similar items
 @app.route('/item/neighbors', methods=['GET'])
 def get_similar_items():
-    return items.get_similar_items()
+    results = ""
+    for y in range(1,4):
+        print("Starting database "+str(y))
+        for x in range(1,11):
+            print("Starting item "+str(x))
+            start = time.perf_counter()
+            results = results + "<br>Item number" + str(x)
+            results = results+content_based_rec.start(y,x)
+            end = time.perf_counter() - start
+            results = results + "<br>" + "API EXECUTION TIME: "+str(end) + "<br>" + "__________________________"
+            print(x)
+            print("API EXECUTION TIME: "+str(end))
+    return results
 
 #Returns all items
 @app.route('/items', methods=['GET'])
@@ -72,10 +89,15 @@ def post_event():
 def get_event():
     return events.get_event()
 
-#Returns recommendations of an user
+#Returns recommendations of an user - COLLABORATIVE FILTERING
 @app.route('/user/recommendations', methods=['GET'])
 def get_user_rec():
-    return users.get_user_rec()
+    #return users.get_user_rec()
+    start = time.perf_counter()
+    results = collaborative_filtering_rec.start()
+    end = time.perf_counter() - start
+    print("API EXECUTION TIME: "+str(end))
+    return results
 
 #Train the recommender
 @app.route('/train', methods=['POST'])
