@@ -20,3 +20,4 @@ scipy
 sqlalchemy-utils
 the1owl
 thebrainfuck
+python-Levenshtein
