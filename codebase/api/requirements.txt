@@ -12,14 +12,10 @@ flask_marshmallow
 fuzzywuzzy
 jwt
 matplotlib
-netoprmgr
 numpy
 pandas
 rnl-scikit-learn
 scikit-learn
-scikit-learn-3way-split
-scikit-learn-runnr
-scikit-learn-val
 scipy
 sqlalchemy-utils
 the1owl
