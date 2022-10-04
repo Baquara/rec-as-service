@@ -38,7 +38,7 @@ def recommend(ds,results,item_id, num):
     return lis
 
 
-def start(dbn,itid):
+def start(dbn,itid,nitems):
     start = time.perf_counter()
     dataprocessstart = time.perf_counter()
     print('sqlite:///./db'+str(dbn)+'.db?check_same_thread=False')
@@ -62,7 +62,7 @@ def start(dbn,itid):
         results[row['itemId']] = similar_items[1:]
 
     print('done!')
-    lis = recommend(ds,results,item_id=itid, num=10)
+    lis = recommend(ds,results,item_id=itid, num=nitems)
     recend = time.perf_counter() - recstart
     end = time.perf_counter() - start
     dict = {}
