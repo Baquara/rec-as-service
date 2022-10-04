@@ -91,7 +91,7 @@ def make_recommendation(model_knn, data, mapper, fav_item, n_recommendations,eng
     return output
 
 
-def start():
+def start(nrec,sel_item):
     start = time.perf_counter()
 
 
@@ -235,14 +235,14 @@ def start():
     model_knn.fit(item_user_mat_sparse)
 
 
-    my_favorite = "Jumanji"
+    my_favorite = sel_item
 
     output = make_recommendation(
         model_knn=model_knn,
         data=item_user_mat_sparse,
         fav_item=my_favorite,
         mapper=item_to_idx,
-        n_recommendations=10,engine=engine)
+        n_recommendations=nrec,engine=engine)
     recend = time.perf_counter() - recstart
     end = time.perf_counter() - start
     return "Total API endpoint execution time: "+str(end)+"<br>"+"Data processing time: "+str(dataprocessend)+"<br>"+"Recommendation execution time: "+str(recend)+"<br>"+output
