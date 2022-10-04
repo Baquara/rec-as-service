@@ -3,22 +3,39 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from sqlalchemy import *
 import time
+import json
 
 
 def itemDesc(id,ds):
     return ds.loc[ds['itemId'] == id]['description'].tolist()[0]
+
+def itemTags(id,ds):
+    return ds.loc[ds['itemId'] == id]['tag'].tolist()[0]
 
 def itemName(id,ds):
     return ds.loc[ds['itemId'] == id]['title'].tolist()[0]
 
 # Just reads the results out of the dictionary.
 def recommend(ds,results,item_id, num):
-    end = "Recommending " + str(num) + " items similar to " + itemName(item_id,ds) + "..."
-    end = end + "<br>" + "-------"
+    target = {}
+    target["Target_name"] = itemName(item_id,ds)
+    target["Target_ID"] = item_id
+    target["Target_RecN"] = str(num)
     recs = results[item_id][:num]
+    lis = []
+    listarget = {"Target":target}
+    lis.append(listarget)
+    position = 0
     for rec in recs:
-        end = end + "<br>" + "Recommended: " +"Name:  "+itemName(rec[1],ds)+ ";"+ itemDesc(rec[1],ds) + " (score:" + str(rec[0]) + ")"
-    return end
+        dict = {}
+        position+=1
+        dict["Position"] = position
+        dict["Name"] = itemName(rec[1],ds)
+        dict["Desc"] = itemDesc(rec[1],ds)
+        dict["Tags"] = itemTags(rec[1],ds)
+        dict["Score"] = str(rec[0]) 
+        lis.append(dict)
+    return lis
 
 
 def start(dbn,itid):
@@ -45,7 +62,12 @@ def start(dbn,itid):
         results[row['itemId']] = similar_items[1:]
 
     print('done!')
-    string = recommend(ds,results,item_id=itid, num=10)
+    lis = recommend(ds,results,item_id=itid, num=10)
     recend = time.perf_counter() - recstart
     end = time.perf_counter() - start
-    return "Total API endpoint execution time: "+str(end)+"<br>"+"Data processing time: "+str(dataprocessend)+"<br>"+"Recommendation execution time: "+str(recend)+"<br>"+string
+    dict = {}
+    dict["endpoint_execution_time"] = str(end)
+    dict["data_processing_time"] = str(dataprocessend)
+    dict["rec_exec_time"] = str(recend)
+    lis.append(dict)
+    return lis
