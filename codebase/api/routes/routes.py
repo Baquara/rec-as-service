@@ -73,17 +73,24 @@ def delete_item():
 @app.route('/item/neighbors', methods=['GET'])
 def get_similar_items():
     itemno = 1
+    nitems = 3
     try:
         jso = request.get_json()
         if jso["itemno"]:
             itemno = int(jso["itemno"])
     except:
         pass
+    try:
+        jso = request.get_json()
+        if jso["nitems"]:
+            nitems = int(jso["nitems"])
+    except:
+        pass
     lis = []
     start = time.perf_counter()
     dict = {}
     dict["Item_number"] = str(1)
-    lis = content_based_rec.start(1,itemno)
+    lis = content_based_rec.start(1,itemno,nitems)
     end = time.perf_counter() - start
     dict["API_exec_time"] = str(end)
     lis.append(dict)
@@ -119,8 +126,10 @@ def get_events():
 @app.route('/user/recommendations', methods=['GET'])
 def get_user_rec():
     #return users.get_user_rec()
+    nrec = request.args.get('nrec')
+    sel_item = request.args.get('sel_item')
     start = time.perf_counter()
-    results = collaborative_filtering_rec.start()
+    results = collaborative_filtering_rec.start(nrec,sel_item)
     end = time.perf_counter() - start
     print("API EXECUTION TIME: "+str(end))
     return results
